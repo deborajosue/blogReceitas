@@ -50,11 +50,6 @@ blogReceitas/
 
 *Layout detalhado das receitas com imagens e instruções claras*
 
-### 📱 Versão Mobile
-![Versão Mobile](images/screenshots/mobile.png)
-
-*Design responsivo adaptado para dispositivos móveis*
-
 ## ⚡ Performance
 
 - Otimização de imagens para carregamento rápido
