@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salmão Grelhado ao Molho Cítrico | Sabores & Histórias</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-red': '#FF6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-orange-50 to-orange-100">
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-2xl font-bold text-brand-red">Sabores & Histórias</a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#receitas" class="text-gray-600 hover:text-brand-red">Receitas</a>
+                    <a href="../index.html#sobre" class="text-gray-600 hover:text-brand-red">Sobre</a>
+                    <a href="../index.html#contato" class="text-gray-600 hover:text-brand-red">Contato</a>
+                    <a href="../index.html#transparencia" class="text-gray-600 hover:text-brand-red">Transparência</a>
+                    <a href="../index.html#termos-uso" class="text-gray-600 hover:text-brand-red">Termos de Uso</a>
+                </div>
+
+                <!-- Menu Mobile -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-600 hover:text-brand-red focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Menu Mobile Dropdown -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <a href="../index.html#receitas" class="block py-2 text-gray-600 hover:text-brand-red">Receitas</a>
+                <a href="../index.html#sobre" class="block py-2 text-gray-600 hover:text-brand-red">Sobre</a>
+                <a href="../index.html#contato" class="block py-2 text-gray-600 hover:text-brand-red">Contato</a>
+                <a href="../index.html#transparencia" class="block py-2 text-gray-600 hover:text-brand-red">Transparência</a>
+                <a href="../index.html#termos-uso" class="block py-2 text-gray-600 hover:text-brand-red">Termos de Uso</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8 pt-24">
+        <article class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
+            <div class="relative h-96">
+                <img src="../images/receitas/SalmãoGrelhado ao Molho Cítrico.webp" alt="Salmão Grelhado" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                    <h1 class="text-4xl font-bold mb-2">Salmão Grelhado ao Molho Cítrico</h1>
+                    <div class="flex items-center space-x-4">
+                        <span class="bg-orange-500 px-3 py-1 rounded-full text-sm">35 min</span>
+                        <span class="bg-orange-500 px-3 py-1 rounded-full text-sm">Intermediário</span>
+                        <span class="bg-orange-500 px-3 py-1 rounded-full text-sm">4 porções</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2">
+                        <section class="mb-12">
+                            <h2 class="text-2xl font-bold mb-4 text-orange-700">Ingredientes</h2>
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="font-semibold mb-2">Salmão:</h3>
+                                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                        <li>4 filés de salmão (180g cada)</li>
+                                        <li>2 colheres de sopa de azeite</li>
+                                        <li>Sal e pimenta a gosto</li>
+                                        <li>1 limão siciliano (para servir)</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <h3 class="font-semibold mb-2">Molho Cítrico:</h3>
+                                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                        <li>Suco de 2 laranjas</li>
+                                        <li>Suco de 1 limão siciliano</li>
+                                        <li>2 colheres de sopa de mel</li>
+                                        <li>1 colher de sopa de mostarda Dijon</li>
+                                        <li>2 colheres de sopa de manteiga</li>
+                                        <li>Sal e pimenta a gosto</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h3 class="font-semibold mb-2">Acompanhamentos:</h3>
+                                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                        <li>2 batatas doces grandes</li>
+                                        <li>1 maço de aspargos frescos</li>
+                                        <li>Azeite de oliva</li>
+                                        <li>Sal e pimenta</li>
+                                        <li>Ervas frescas para decorar</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 class="text-2xl font-bold mb-4 text-orange-700">Modo de Preparo</h2>
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="font-semibold mb-2">Purê de Batata Doce:</h3>
+                                    <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                                        <li>Descasque e corte as batatas em cubos</li>
+                                        <li>Cozinhe em água com sal até ficarem macias</li>
+                                        <li>Amasse as batatas ainda quentes</li>
+                                        <li>Adicione um fio de azeite e tempere</li>
+                                        <li>Mantenha aquecido</li>
+                                    </ol>
+                                </div>
+                                
+                                <div>
+                                    <h3 class="font-semibold mb-2">Aspargos:</h3>
+                                    <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                                        <li>Lave os aspargos e remova as pontas duras</li>
+                                        <li>Branqueie em água fervente por 2-3 minutos</li>
+                                        <li>Transfira para água com gelo</li>
+                                        <li>Seque e reserve</li>
+                                    </ol>
+                                </div>
+
+                                <div>
+                                    <h3 class="font-semibold mb-2">Molho Cítrico:</h3>
+                                    <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                                        <li>Em uma panela, reduza os sucos cítricos pela metade</li>
+                                        <li>Adicione o mel e a mostarda</li>
+                                        <li>Incorpore a manteiga aos poucos</li>
+                                        <li>Tempere com sal e pimenta</li>
+                                        <li>Mantenha aquecido</li>
+                                    </ol>
+                                </div>
+
+                                <div>
+                                    <h3 class="font-semibold mb-2">Salmão:</h3>
+                                    <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                                        <li>Tempere os filés com sal e pimenta</li>
+                                        <li>Aqueça uma grelha ou frigideira antiaderente</li>
+                                        <li>Grelhe o salmão por 4-5 minutos de cada lado</li>
+                                        <li>O ponto ideal é quando o centro ainda está rosado</li>
+                                    </ol>
+                                </div>
+
+                                <div>
+                                    <h3 class="font-semibold mb-2">Montagem:</h3>
+                                    <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                                        <li>Aqueça rapidamente os aspargos na grelha</li>
+                                        <li>Disponha o purê no centro do prato</li>
+                                        <li>Coloque o salmão por cima</li>
+                                        <li>Arrume os aspargos ao lado</li>
+                                        <li>Regue com o molho cítrico</li>
+                                        <li>Decore com ervas frescas e fatias de limão</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div>
+                        <section class="bg-orange-50 p-6 rounded-lg">
+                            <h2 class="text-xl font-bold mb-4 text-orange-700">Dicas do Chef</h2>
+                            <ul class="space-y-4 text-gray-700">
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    Escolha salmão fresco com cor viva e brilhante
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    A pele do salmão deve ficar crocante
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    Não superaqueça o molho para não perder o sabor cítrico
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section class="mt-8 bg-orange-50 p-6 rounded-lg">
+                            <h2 class="text-xl font-bold mb-4 text-orange-700">Informação Nutricional</h2>
+                            <div class="space-y-2 text-gray-700">
+                                <p>Porção: 1 prato (350g)</p>
+                                <ul class="space-y-1">
+                                    <li>Calorias: 420 kcal</li>
+                                    <li>Proteínas: 35g</li>
+                                    <li>Carboidratos: 25g</li>
+                                    <li>Gorduras: 22g</li>
+                                    <li>Ômega 3: 2.8g</li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center text-gray-600">
+            <p> 2025 Sabores & Histórias. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

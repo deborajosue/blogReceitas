@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores & Histórias</title>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="styles.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-red': '#E74C3C',
+                        'brand-pink': '#FDF2F2'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <header class="fixed top-0 left-0 right-0 bg-[#FDF2F2]/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-200">
+        <nav class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <img src="images/outras/Logo.png" alt="Sabores & Histórias" class="w-12 h-18 rounded-full">
+                    <span class="text-xl font-script text-gray-800">Sabores & Histórias</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-brand-red">Home</a>
+                    <a href="#receitas" class="text-gray-600 hover:text-brand-red">Receitas</a>
+                    <a href="#blog" class="text-gray-600 hover:text-brand-red">Blog</a>
+                    <a href="#contato" class="text-gray-600 hover:text-brand-red">Contato</a>
+                    <a href="#sobre" class="text-gray-600 hover:text-brand-red">Sobre</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="h-20"></div>
+
+    <main>
+        
+        <!-- Seção Home -->
+        <section id="home" class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Sabores & Histórias</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Receitas práticas e histórias inspiradoras para transformar sua cozinha em um 
+                        lugar cheio de amor e criatividade.
+                    </p>
+                </div>
+
+                <!-- Carrossel de Receitas -->
+                <div class="relative max-w-7xl mx-auto mb-16" x-data="carousel">
+                    <div class="flex overflow-x-auto gap-6 pb-6 hide-scrollbar" x-ref="container">
+                        <!-- Card 1 -->
+                        <div class="shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/3">
+                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                <a href="receitas/quinoa.html" class="block">
+                                    <div class="relative">
+                                        <img src="images/receitas/Quinoa_Com_Espinafre_.png" alt="Quinoa Bowl" class="w-full h-64 object-cover">
+                                        <div class="absolute top-4 left-4">
+                                            <span class="bg-white px-2 py-1 rounded text-sm">40 min</span>
+                                            <span class="bg-white px-2 py-1 rounded text-sm ml-2">Intermediário</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-semibold mb-2">Quinoa Com Espinafre Assado E Hummus</h3>
+                                        <p class="text-gray-600">Salada De Folhas E Molho De Iogurte</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <!-- Card 2 -->
+                        <div class="shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/3">
+                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                <a href="receitas/picanha.html" class="block">
+                                    <div class="relative">
+                                        <img src="images/receitas/picanhacomchimichuri.png" alt="Picanha" class="w-full h-64 object-cover">
+                                        <div class="absolute top-4 left-4">
+                                            <span class="bg-white px-2 py-1 rounded text-sm">90 min</span>
+                                            <span class="bg-white px-2 py-1 rounded text-sm ml-2">Intermediário</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-semibold mb-2">Picanha Com Chimichurri</h3>
+                                        <p class="text-gray-600">Salada De Batata E Vinagrete</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <!-- Card 3 -->
+                        <div class="shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/3">
+                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                <a href="receitas/caprese.html" class="block">
+                                    <div class="relative">
+                                        <img src="images/receitas/Salada caprese.jpg" alt="Bruschetta" class="w-full h-64 object-cover">
+                                        <div class="absolute top-4 left-4">
+                                            <span class="bg-white px-2 py-1 rounded text-sm">30 min</span>
+                                            <span class="bg-white px-2 py-1 rounded text-sm ml-2">Intermediário</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-semibold mb-2">Salada De Caprese Molho Pesto</h3>
+                                        <p class="text-gray-600">Bruschetta De Tomate E Manjericão</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <!-- Card 4 -->
+                        <div class="shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/3">
+                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                <a href="receitas/risoto.html" class="block">
+                                    <div class="relative">
+                                        <img src="images/receitas/Risoto de aspargos .jpg" alt="Risoto" class="w-full h-64 object-cover">
+                                        <div class="absolute top-4 left-4">
+                                            <span class="bg-white px-2 py-1 rounded text-sm">45 min</span>
+                                            <span class="bg-white px-2 py-1 rounded text-sm ml-2">Intermediário</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-semibold mb-2">Risoto de Funghi com Vinho Branco</h3>
+                                        <p class="text-gray-600">Finalizado com Parmesão e Trufas</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <!-- Card 5 -->
+                        <div class="shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/3">
+                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                <a href="receitas/salmao.html" class="block">
+                                    <div class="relative">
+                                        <img src="images/receitas/SalmãoGrelhado ao Molho Cítrico.webp" alt="Salmão" class="w-full h-64 object-cover">
+                                        <div class="absolute top-4 left-4">
+                                            <span class="bg-white px-2 py-1 rounded text-sm">35 min</span>
+                                            <span class="bg-white px-2 py-1 rounded text-sm ml-2">Intermediário</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-semibold mb-2">Salmão Grelhado ao Molho Cítrico</h3>
+                                        <p class="text-gray-600">Com Purê de Batata Doce e Aspargos</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <!-- Card 6 -->
+                        <div class="shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/3">
+                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                <a href="receitas/ramen.html" class="block">
+                                    <div class="relative">
+                                        <img src="images/receitas/lamen macarrão.jpg" alt="Ramen" class="w-full h-64 object-cover">
+                                        <div class="absolute top-4 left-4">
+                                            <span class="bg-white px-2 py-1 rounded text-sm">60 min</span>
+                                            <span class="bg-white px-2 py-1 rounded text-sm ml-2">Avançado</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-semibold mb-2">Ramen Tradicional Japonês</h3>
+                                        <p class="text-gray-600">Com Caldo de Porco e Ovo Marinado</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <!-- Card 7 -->
+                        <div class="shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/3">
+                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                <a href="receitas/pavlova.html" class="block">
+                                    <div class="relative">
+                                        <img src="images/receitas/PavlovadeFrutasVermelhas.jpg" alt="Sobremesa" class="w-full h-64 object-cover">
+                                        <div class="absolute top-4 left-4">
+                                            <span class="bg-white px-2 py-1 rounded text-sm">50 min</span>
+                                            <span class="bg-white px-2 py-1 rounded text-sm ml-2">Intermediário</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-semibold mb-2">Pavlova de Frutas Vermelhas</h3>
+                                        <p class="text-gray-600">Com Chantilly e Calda de Morango</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button @click="prev()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 p-3 rounded-full shadow-lg hover:bg-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7m7-7H3" />
+                        </svg>
+                    </button>
+
+                    <button @click="next()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 p-3 rounded-full shadow-lg hover:bg-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7m7-7H3" />
+                        </svg>
+                    </button>
+                </div>
+
+                <script>
+                    document.addEventListener('alpine:init', () => {
+                        Alpine.data('carousel', () => ({
+                            currentIndex: 0,
+                            interval: null,
+
+                            init() {
+                                this.startAutoplay()
+                            },
+
+                            next() {
+                                const container = this.$refs.container
+                                const cardWidth = container.children[0].offsetWidth
+                                const scrollAmount = cardWidth + 24 // 24 é o gap
+                                container.scrollBy({ left: scrollAmount, behavior: 'smooth' })
+                            },
+
+                            prev() {
+                                const container = this.$refs.container
+                                const cardWidth = container.children[0].offsetWidth
+                                const scrollAmount = cardWidth + 24
+                                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' })
+                            },
+
+                            startAutoplay() {
+                                this.interval = setInterval(() => {
+                                    this.next()
+                                }, 5000)
+                            },
+
+                            stopAutoplay() {
+                                if (this.interval) {
+                                    clearInterval(this.interval)
+                                    this.interval = null
+                                }
+                            }
+                        }))
+                    })
+                </script>
+
+                <!-- Campo de Pesquisa -->
+                <section id="receitas" class="py-16">
+                    <div class="bg-[#FDF2F2] py-12 rounded-lg mb-16">
+                        <div class="container mx-auto px-4">
+                            <h2 class="text-3xl font-bold text-center mb-8">Encontre a Receita Perfeita</h2>
+                            <div class="max-w-2xl mx-auto flex">
+                                <input type="text" 
+                                    placeholder="Procure uma receita..." 
+                                    class="flex-1 p-4 rounded-l-lg border-2 border-r-0 border-gray-200 focus:outline-none focus:border-brand-red"
+                                >
+                                <button class="bg-brand-red text-white px-8 py-4 rounded-r-lg hover:bg-red-600 transition-colors">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grupos de Receitas -->
+                    <div class="container mx-auto px-4">
+                        <h2 class="text-4xl font-bold text-center mb-12 relative">
+                            Categorias de Receitas
+                        
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <!-- Sobremesas -->
+                            <div class="group relative overflow-hidden rounded-lg cursor-pointer">
+                                <img src="images/categorias/sobremesa.jpg"
+                                     alt="Sobremesas" 
+                                     class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                                    <div class="relative w-full">
+                                        <span class="block w-12 h-0.5 bg-white mb-3 transform -translate-x-4 group-hover:translate-x-0 transition-transform duration-300"></span>
+                                        <div class="bg-brand-red/70 backdrop-blur-sm rounded-lg px-4 py-3">
+                                            <h3 class="text-white text-2xl font-bold mb-0.5">Sobremesas</h3>
+                                            <p class="text-gray-100 text-sm -mt-0.5 leading-tight pb-4">Deliciosas sobremesas para adoçar seu dia</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Lanches -->
+                            <div class="group relative overflow-hidden rounded-lg cursor-pointer">
+                                <img src="images/categorias/lanches.jpg" 
+                                     alt="Lanches" 
+                                     class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                                    <div class="relative w-full">
+                                        <span class="block w-12 h-0.5 bg-white mb-3 transform -translate-x-4 group-hover:translate-x-0 transition-transform duration-300"></span>
+                                        <div class="bg-brand-red/70 backdrop-blur-sm rounded-lg px-4 py-3">
+                                            <h3 class="text-white text-2xl font-bold mb-0.5 leading-tight">Lanches</h3>
+                                            <p class="text-gray-100 text-sm -mt-0.5 leading-tight pb-4">Opções práticas e saborosas para qualquer hora</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bebidas -->
+                            <div class="group relative overflow-hidden rounded-lg cursor-pointer">
+                                <img src="images/categorias/bebidas.jpg" 
+                                     alt="Bebidas" 
+                                     class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                                    <div class="relative w-full">
+                                        <span class="block w-12 h-0.5 bg-white mb-3 transform -translate-x-4 group-hover:translate-x-0 transition-transform duration-300"></span>
+                                        <div class="bg-brand-red/70 backdrop-blur-sm rounded-lg px-4 py-3">
+                                            <h3 class="text-white text-2xl font-bold mb-0.5 leading-tight">Bebidas</h3>
+                                            <p class="text-gray-100 text-sm -mt-0.5 leading-tight pb-4">Drinks e bebidas especiais para todas as ocasiões</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Acompanhamentos -->
+                            <div class="group relative overflow-hidden rounded-lg cursor-pointer">
+                                <img src="images/categorias/acompnhamento.jpg" 
+                                     alt="Acompanhamentos" 
+                                     class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                                    <div class="relative w-full">
+                                        <span class="block w-12 h-0.5 bg-white mb-3 transform -translate-x-4 group-hover:translate-x-0 transition-transform duration-300"></span>
+                                        <div class="bg-brand-red/70 backdrop-blur-sm rounded-lg px-4 py-3">
+                                            <h3 class="text-white text-2xl font-bold mb-0.5 leading-tight">Acompanhamentos</h3>
+                                            <p class="text-gray-100 text-sm -mt-0.5 leading-tight pb-4">Complementos perfeitos para suas refeições</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Seção de Blog -->
+        <section id="blog" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12">
+                    Blog
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Post 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="images/blog/experiencia gastronomica.jpg" alt="Experiência Gastronômica" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-500 mb-3">
+                                <span class="flex items-center mr-4">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                    </svg>
+                                    16/12/2024
+                                </span>
+                                <span class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    5 min de leitura
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-red transition-colors duration-300">Como Criar Uma Experiência Gastronômica Completa Para Seus Convidados</h3>
+                            <p class="text-gray-600 text-sm mb-4">Descubra dicas e truques para criar momentos inesquecíveis através da gastronomia.</p>
+                            <a href="#" class="inline-flex items-center text-brand-red hover:text-brand-red/80 transition-colors duration-300">
+                                Ler mais
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Post 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="images/blog/vinho perfeito.jpg" alt="Vinho Perfeito" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-500 mb-3">
+                                <span class="flex items-center mr-4">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                    </svg>
+                                    16/12/2024
+                                </span>
+                                <span class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    4 min de leitura
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-red transition-colors duration-300">Como Escolher O Vinho Perfeito Para Cada Prato</h3>
+                            <p class="text-gray-600 text-sm mb-4">Aprenda a harmonizar vinhos com diferentes pratos e surpreenda seus convidados.</p>
+                            <a href="#" class="inline-flex items-center text-brand-red hover:text-brand-red/80 transition-colors duration-300">
+                                Ler mais
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Post 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="images/blog/Noite de fondue .jpg" alt="Noite de Fondue" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-500 mb-3">
+                                <span class="flex items-center mr-4">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                    </svg>
+                                    16/12/2024
+                                </span>
+                                <span class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    6 min de leitura
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-red transition-colors duration-300">Como Preparar Uma Noite De Fondue Perfeita</h3>
+                            <p class="text-gray-600 text-sm mb-4">Dicas e receitas para uma experiência única de fondue em casa.</p>
+                            <a href="#" class="inline-flex items-center text-brand-red hover:text-brand-red/80 transition-colors duration-300">
+                                Ler mais
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Seção de Contato -->
+        <section id="contato" class="bg-white py-16">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto">
+                    <span class="text-brand-red text-lg">Entre em Contato</span>
+                    <h2 class="text-3xl font-bold mt-2 mb-6">Fale Conosco</h2>
+                    
+                    <p class="text-gray-600 mb-8">
+                        Estamos sempre abertos a conversar! Se você tem perguntas, deseja compartilhar suas ideias, 
+                        ou está interessado em parcerias e colaborações
+                    </p>
+
+                    <div class="mb-8">
+                        <h3 class="font-bold text-xl mb-4">Endereço:</h3>
+                        <p class="text-gray-600">
+                            Se preferir, visite-nos em nossa sede:<br>
+                            Rua Gourmet, 123 – Centro, Cidade Saborosa.
+                        </p>
+                    </div>
+
+                    <div class="mb-8">
+                        <h3 class="font-bold text-xl mb-4">Dicas para Facilitar o Atendimento</h3>
+                        <ul class="text-gray-600 space-y-3">
+                            <li>• Inclua o máximo de detalhes possível na sua mensagem para que possamos atender prontamente.</li>
+                            <li>• Para propostas de parceria, especifique o objetivo e informações relevantes.</li>
+                        </ul>
+                    </div>
+
+                    <p class="text-gray-600 mb-8">
+                        Estamos ansiosos para ouvir você e construir experiências incríveis juntos!
+                    </p>
+
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-icon social-instagram p-3 rounded-full text-white">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon social-facebook p-3 rounded-full text-white">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon social-youtube p-3 rounded-full text-white">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon social-pinterest p-3 rounded-full text-white">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon social-github p-3 rounded-full text-white">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Formulário de Contato -->
+<section class="bg-[#FDF2F2] py-16">
+    <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-center mb-6">Melhor forma de Facilitar nosso Atendimento</h2>
+            <p class="text-center text-gray-600 mb-8">Preencha o formulário abaixo para uma comunicação rápida e eficiente:</p>
+
+            <form class="space-y-6">
+                <div>
+                    <label for="nome" class="block text-gray-700 mb-2">Nome</label>
+                    <input type="text" id="nome" name="nome" 
+                        class="w-full px-4 py-2 rounded-md border border-gray-200 bg-white focus:outline-none focus:border-brand-red"
+                        placeholder="Name">
+                </div>
+
+                <div>
+                    <label for="email" class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" id="email" name="email" 
+                        class="w-full px-4 py-2 rounded-md border border-gray-200 bg-white focus:outline-none focus:border-brand-red"
+                        placeholder="Email">
+                </div>
+
+                <div>
+                    <label for="tipo-contato" class="block text-gray-700 mb-2">Tipo de contato</label>
+                    <select id="tipo-contato" name="tipo-contato" 
+                        class="w-full px-4 py-2 rounded-md border border-gray-200 bg-white focus:outline-none focus:border-brand-red appearance-none">
+                        <option value="parceria">Parceria</option>
+                        <option value="critica-sugestoes">Crítica / Sugestões</option>
+                        <option value="agradecimento">Agradecimento</option>
+                        <option value="relatar-problema">Relatar problema</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="pagina-web" class="block text-gray-700 mb-2">Pagina Web</label>
+                    <input type="url" id="pagina-web" name="pagina-web" 
+                        class="w-full px-4 py-2 rounded-md border border-gray-200 bg-white focus:outline-none focus:border-brand-red"
+                        placeholder="Insira a URL da sua pagina/rede social...">
+                </div>
+
+                <div>
+                    <label for="mensagem" class="block text-gray-700 mb-2">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="6" 
+                        class="w-full px-4 py-2 rounded-md border border-gray-200 bg-white focus:outline-none focus:border-brand-red resize-none"
+                        placeholder="Digite seu texto aqui..."></textarea>
+                </div>
+
+                <div class="flex items-center">
+                    <input type="checkbox" id="aceite" name="aceite" class="mr-2">
+                    <label for="aceite" class="text-gray-600">
+                        Eu concordo com as <a href="#termos-uso" class="text-brand-red hover:text-red-700">Termos de Uso</a>
+                    </label>
+                </div>
+
+                <button type="submit" 
+                    class="w-full bg-brand-red text-white font-semibold py-3 px-6 rounded-md hover:bg-red-700 transition-colors">
+                    Enviar
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Seção Sobre -->
+<section id="sobre" class="bg-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Sobre</h2>
+            <p class="text-gray-600 text-center mb-16 max-w-3xl mx-auto">
+                Inspirar pessoas a explorar a cozinha com criatividade, promover conexões autênticas e criar momentos inesquecíveis. Acreditamos que a gastronomia é uma forma poderosa de unir as pessoas e compartilhar histórias.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-brand-red text-xl mb-4">Nossa História</h3>
+                        <h4 class="text-2xl font-semibold mb-4">A fundadora e idealizadora do site, Débora Botelho Josué</h4>
+                        <p class="text-gray-600 mb-6">
+                            Desde jovem, ela se inspirou nas receitas de família e nas tradições 
+                            culinárias de sua região, aprendendo que cada prato conta uma 
+                            história. Formada em gastronomia e com anos de experiência em 
+                            eventos e criação de conteúdos,
+                        </p>
+                        <div class="italic text-gray-700 border-l-4 border-brand-red pl-4 my-8">
+                            "Seu amor pela gastronomia é o coração por trás de cada detalhe.."
+                            <div class="mt-2 text-brand-red">Débora B. Josué</div>
+                        </div>
+                        <div class="flex space-x-4 mt-8">
+                            <a href="#" class="social-icon social-instagram p-3 rounded-full text-white">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon social-facebook p-3 rounded-full text-white">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon social-youtube p-3 rounded-full text-white">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon social-pinterest p-3 rounded-full text-white">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon social-github p-3 rounded-full text-white">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Seção de Transparência -->
+<section id="transparencia" class="bg-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Transparência</h2>
+            <p class="text-gray-600 text-center mb-12">
+                Entre em contato conosco para dúvidas, sugestões ou parcerias. Estamos aqui para ajudar!
+            </p>
+
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Compromisso com a <span class="text-brand-red">Privacidade</span> e Transparência</h3>
+                    <p class="text-gray-600 mb-6">
+                        O <span class="text-brand-red">Sabores e História</span> se compromete com a transparência e a proteção da sua 
+                        privacidade. Esta página explica como coletamos, utilizamos e protegemos as 
+                        informações que você nos fornece ao visitar nosso blog.
+                    </p>
+                    <hr class="my-8 border-gray-200">
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">1. Informações que Coletamos</h3>
+                    <p class="text-gray-600 mb-6">
+                        Quando você acessa o nosso blog, podemos coletar as seguintes informações:
+                    </p>
+                    <ul class="space-y-4">
+                        <li>
+                            <span class="font-semibold">Informações Pessoais:</span> Nome, e-mail e outras informações fornecidas ao 
+                            preencher formulários de inscrição, como o de nossa newsletter.
+                        </li>
+                        <li>
+                            <span class="font-semibold">Informações de Navegação:</span> Coletamos dados sobre como você interage com o 
+                            nosso blog, como páginas visitadas, tempo gasto, e links clicados. Usamos cookies 
+                            para ajudar a melhorar a experiência do usuário e analisar o desempenho do site.
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">2. Como Usamos suas Informações</h3>
+                    <p class="text-gray-600 mb-4">
+                        Utilizamos as informações coletadas para os seguintes propósitos:
+                    </p>
+                    <ul class="space-y-3 text-gray-600">
+                        <li>• Personalizar sua experiência e entregar conteúdo relevante</li>
+                        <li>• Enviar newsletters e atualizações sobre novas receitas e conteúdos</li>
+                        <li>• Melhorar nosso site e serviços com base no feedback e comportamento dos usuários</li>
+                        <li>• Processar transações e responder a suas solicitações ou dúvidas</li>
+                        <li>• Proteger nossos direitos e prevenir atividades fraudulentas</li>
+                        <li>• Cumprir obrigações legais e regulatórias aplicáveis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Seção de Termos de Uso -->
+<section id="termos-uso" class="bg-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Termos De Uso</h2>
+            <p class="text-gray-600 text-center mb-12">
+                Entre em contato conosco para dúvidas, sugestões ou parcerias. Estamos aqui para ajudar!
+            </p>
+
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Termos de Uso do Sabores e História</h3>
+                    <p class="text-gray-600 mb-6">
+                        Seja bem-vindo ao <span class="text-brand-red">Sabores e História</span>! Estes Termos de Uso regulam o acesso e a 
+                        utilização do nosso site, incluindo seu conteúdo, funcionalidades e serviços. Ao 
+                        navegar em nosso site, você concorda com os termos descritos abaixo. Caso não 
+                        concorde, solicitamos que não utilize o site.
+                    </p>
+                    <hr class="my-8 border-gray-200">
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">1. Acesso ao Site</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• O acesso é permitido para fins pessoais e não comerciais.</li>
+                        <li>• Não é permitido copiar, reproduzir ou distribuir qualquer parte do conteúdo sem 
+                            autorização prévia.</li>
+                        <li>• O usuário é responsável por garantir que os dispositivos utilizados para acessar o 
+                            site sejam seguros e compatíveis com nossas plataformas.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">2. Uso do Conteúdo</h3>
+                    <p class="text-gray-600 mb-4">
+                        Todo o conteúdo publicado no <span class="text-brand-red">Sabores e História</span>, incluindo receitas, dicas e 
+                        fotografias, está protegido por direitos autorais. Nossos termos de uso estabelecem:
+                    </p>
+                    <ul class="space-y-3 text-gray-600">
+                        <li>• As receitas são para uso pessoal e não comercial</li>
+                        <li>• É permitido compartilhar o conteúdo em redes sociais, desde que citada a fonte</li>
+                        <li>• Modificações nas receitas são permitidas para uso pessoal</li>
+                        <li>• É proibida a reprodução comercial do conteúdo sem autorização</li>
+                        <li>• As fotografias não podem ser utilizadas sem permissão expressa</li>
+                        <li>• O conteúdo não pode ser usado para fins promocionais sem nossa autorização</li>
+                        <li>• Respeite os créditos e direitos autorais ao compartilhar nosso conteúdo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        
+
+    </main>
+
+    <footer class="bg-[#FDF2F2] py-16 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+                <!-- SITE Column -->
+                <div>
+                    <h3 class="text-gray-800 font-bold mb-4 uppercase relative after:content-[''] after:block after:w-16 after:h-[1px] after:bg-gray-300 after:mt-1">SITE</h3>
+                    <div class="mb-4">
+                        <img src="images/outras/Logo.png" alt="Logo Sabores" class="w-18 h-16">
+                    </div>
+                    <p class="text-gray-600 text-sm">Receitas práticas e histórias inspiradoras para transformar sua cozinha em um lugar cheio de amor e criatividade.</p>
+                    <div class="mt-4 font-script text-xl text-gray-700"><img src="images/outras/text-1735494402008.png" alt=""></div>
+                </div>
+
+                <!-- RECEITAS Column -->
+                <div>
+                    <h3 class="text-gray-800 font-bold mb-4 uppercase relative after:content-[''] after:block after:w-16 after:h-[1px] after:bg-gray-300 after:mt-1">RECEITAS</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Entradas</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Pratos principais</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Sobremesas</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Pratos nacionais</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Bebidas</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Lanches</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Saladas</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Acompanhamentos</a></li>
+                    </ul>
+                </div>
+
+                <!-- BLOG Column -->
+                <div>
+                    <h3 class="text-gray-800 font-bold mb-4 uppercase relative after:content-[''] after:block after:w-16 after:h-[1px] after:bg-gray-300 after:mt-1">BLOG</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Café</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Cardápio</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Eventos</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Fondue</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Harmonização</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Memorável</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Planejamento</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Regional</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Temático</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Tendências</a></li>
+                    </ul>
+                </div>
+
+                <!-- EVENTOS Column -->
+                <div>
+                    <h3 class="text-gray-800 font-bold mb-4 uppercase relative after:content-[''] after:block after:w-16 after:h-[1px] after:bg-gray-300 after:mt-1">EVENTOS</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Almoço</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Aniversário</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Casamento</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Cultura</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Empresa</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Família</a></li>
+                        <li><a href="#" class="text-brand-red hover:text-red-700">Jantar</a></li>
+                    </ul>
+                </div>
+
+                <!-- SOCIAL Column -->
+                <div>
+                    <div class="flex flex-col space-y-4">
+                        <h3 class="text-gray-800 font-bold mb-4 uppercase relative after:content-[''] after:block after:w-16 after:h-[1px] after:bg-gray-300 after:mt-1">SOCIAL</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="social-icon social-instagram p-3 rounded-full text-white">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon social-facebook p-3 rounded-full text-white">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon social-youtube p-3 rounded-full text-white">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon social-pinterest p-3 rounded-full text-white">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon social-github p-3 rounded-full text-white">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-gray-200 text-center text-sm text-gray-600">
+                <p> 2025 | Todos Os Direitos Reservados 
+                    <span class="mx-4">|</span>
+                    <a href="#transparencia" class="text-brand-red hover:text-red-700">Transparência</a>
+                    <span class="mx-4">|</span>
+                    <a href="#termos-uso" class="text-brand-red hover:text-red-700">Termos de uso</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Controle do header fixo
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 0) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risoto de Funghi com Vinho Branco | Sabores & Histórias</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-red': '#FF6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-amber-50 to-amber-100">
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-2xl font-bold text-brand-red">Sabores & Histórias</a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#receitas" class="text-gray-600 hover:text-brand-red">Receitas</a>
+                    <a href="../index.html#sobre" class="text-gray-600 hover:text-brand-red">Sobre</a>
+                    <a href="../index.html#contato" class="text-gray-600 hover:text-brand-red">Contato</a>
+                    <a href="../index.html#transparencia" class="text-gray-600 hover:text-brand-red">Transparência</a>
+                    <a href="../index.html#termos-uso" class="text-gray-600 hover:text-brand-red">Termos de Uso</a>
+                </div>
+
+                <!-- Menu Mobile -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-600 hover:text-brand-red focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Menu Mobile Dropdown -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <a href="../index.html#receitas" class="block py-2 text-gray-600 hover:text-brand-red">Receitas</a>
+                <a href="../index.html#sobre" class="block py-2 text-gray-600 hover:text-brand-red">Sobre</a>
+                <a href="../index.html#contato" class="block py-2 text-gray-600 hover:text-brand-red">Contato</a>
+                <a href="../index.html#transparencia" class="block py-2 text-gray-600 hover:text-brand-red">Transparência</a>
+                <a href="../index.html#termos-uso" class="block py-2 text-gray-600 hover:text-brand-red">Termos de Uso</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8">
+        <article class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
+            <div class="relative h-96">
+                <img src="../images/receitas/Risoto de aspargos .jpg" alt="Risoto" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                    <h1 class="text-4xl font-bold mb-2">Risoto de Funghi com Vinho Branco</h1>
+                    <div class="flex items-center space-x-4">
+                        <span class="bg-amber-500 px-3 py-1 rounded-full text-sm">45 min</span>
+                        <span class="bg-amber-500 px-3 py-1 rounded-full text-sm">Intermediário</span>
+                        <span class="bg-amber-500 px-3 py-1 rounded-full text-sm">4 porções</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2">
+                        <section class="mb-12">
+                            <h2 class="text-2xl font-bold mb-4 text-amber-700">Ingredientes</h2>
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="font-semibold mb-2">Base do Risoto:</h3>
+                                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                        <li>2 xícaras de arroz arbóreo</li>
+                                        <li>1 cebola média picada</li>
+                                        <li>2 dentes de alho picados</li>
+                                        <li>1/2 xícara de vinho branco seco</li>
+                                        <li>6 xícaras de caldo de legumes quente</li>
+                                        <li>2 colheres de sopa de manteiga</li>
+                                        <li>2 colheres de sopa de azeite de oliva</li>
+                                        <li>1/2 xícara de queijo parmesão ralado</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <h3 class="font-semibold mb-2">Funghi e Finalização:</h3>
+                                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                        <li>200g de funghi seco (hidratado)</li>
+                                        <li>Água da hidratação do funghi</li>
+                                        <li>2 colheres de sopa de manteiga</li>
+                                        <li>Sal e pimenta do reino a gosto</li>
+                                        <li>Trufa negra para finalizar (opcional)</li>
+                                        <li>Salsinha picada para decorar</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 class="text-2xl font-bold mb-4 text-amber-700">Modo de Preparo</h2>
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="font-semibold mb-2">Preparo do Funghi:</h3>
+                                    <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                                        <li>Hidrate o funghi em água morna por 20 minutos</li>
+                                        <li>Reserve a água da hidratação (coada)</li>
+                                        <li>Pique o funghi em pedaços médios</li>
+                                        <li>Refogue na manteiga até dourar</li>
+                                        <li>Reserve</li>
+                                    </ol>
+                                </div>
+                                
+                                <div>
+                                    <h3 class="font-semibold mb-2">Risoto:</h3>
+                                    <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                                        <li>Em uma panela, aqueça o azeite e refogue a cebola</li>
+                                        <li>Adicione o alho e refogue mais um pouco</li>
+                                        <li>Acrescente o arroz e refogue até ficar brilhante</li>
+                                        <li>Adicione o vinho branco e deixe evaporar</li>
+                                        <li>Comece a adicionar o caldo quente, uma concha por vez</li>
+                                        <li>Mexa constantemente, esperando o caldo ser absorvido</li>
+                                        <li>Na metade do processo, adicione a água do funghi</li>
+                                        <li>Continue o processo até o arroz ficar al dente</li>
+                                        <li>Adicione o funghi reservado</li>
+                                        <li>Finalize com manteiga e parmesão</li>
+                                        <li>Ajuste o sal e a pimenta</li>
+                                    </ol>
+                                </div>
+
+                                <div>
+                                    <h3 class="font-semibold mb-2">Finalização:</h3>
+                                    <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                                        <li>Sirva imediatamente</li>
+                                        <li>Decore com salsinha picada</li>
+                                        <li>Se desejar, finalize com lascas de trufa</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div>
+                        <section class="bg-amber-50 p-6 rounded-lg">
+                            <h2 class="text-xl font-bold mb-4 text-amber-700">Dicas do Chef</h2>
+                            <ul class="space-y-4 text-gray-700">
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-amber-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    Mantenha o caldo sempre quente durante o preparo
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-amber-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    Use vinho branco de boa qualidade
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-amber-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    O risoto deve ficar cremoso, não muito seco
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section class="mt-8 bg-amber-50 p-6 rounded-lg">
+                            <h2 class="text-xl font-bold mb-4 text-amber-700">Informação Nutricional</h2>
+                            <div class="space-y-2 text-gray-700">
+                                <p>Porção: 1 prato (300g)</p>
+                                <ul class="space-y-1">
+                                    <li>Calorias: 450 kcal</li>
+                                    <li>Proteínas: 12g</li>
+                                    <li>Carboidratos: 65g</li>
+                                    <li>Gorduras: 18g</li>
+                                    <li>Fibras: 3g</li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center text-gray-600">
+            <p>© 2025 Sabores & Histórias. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

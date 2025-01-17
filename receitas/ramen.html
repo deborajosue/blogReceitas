@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramen Tradicional Japonês | Sabores & Histórias</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-red': '#FF6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-slate-100">
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-2xl font-bold text-brand-red">Sabores & Histórias</a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#receitas" class="text-gray-600 hover:text-brand-red">Receitas</a>
+                    <a href="../index.html#sobre" class="text-gray-600 hover:text-brand-red">Sobre</a>
+                    <a href="../index.html#contato" class="text-gray-600 hover:text-brand-red">Contato</a>
+                    <a href="../index.html#transparencia" class="text-gray-600 hover:text-brand-red">Transparência</a>
+                    <a href="../index.html#termos-uso" class="text-gray-600 hover:text-brand-red">Termos de Uso</a>
+                </div>
+
+                <!-- Menu Mobile -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-600 hover:text-brand-red focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Menu Mobile Dropdown -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <a href="../index.html#receitas" class="block py-2 text-gray-600 hover:text-brand-red">Receitas</a>
+                <a href="../index.html#sobre" class="block py-2 text-gray-600 hover:text-brand-red">Sobre</a>
+                <a href="../index.html#contato" class="block py-2 text-gray-600 hover:text-brand-red">Contato</a>
+                <a href="../index.html#transparencia" class="block py-2 text-gray-600 hover:text-brand-red">Transparência</a>
+                <a href="../index.html#termos-uso" class="block py-2 text-gray-600 hover:text-brand-red">Termos de Uso</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8 pt-24">
+        <article class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
+            <div class="relative h-96">
+                <img src="../images/receitas/lamen macarrão.jpg" alt="Ramen Tradicional" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                    <h1 class="text-4xl font-bold mb-2">Ramen Tradicional Japonês</h1>
+                    <div class="flex items-center space-x-4">
+                        <span class="bg-slate-500 px-3 py-1 rounded-full text-sm">60 min</span>
+                        <span class="bg-slate-500 px-3 py-1 rounded-full text-sm">Avançado</span>
+                        <span class="bg-slate-500 px-3 py-1 rounded-full text-sm">4 porções</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2">
+                        <section class="mb-12">
+                            <h2 class="text-2xl font-bold mb-4 text-slate-700">Ingredientes</h2>
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="font-semibold mb-2">Caldo (Dashi):</h3>
+                                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                        <li>2L de água</li>
+                                        <li>20g de kombu (alga)</li>
+                                        <li>30g de katsuobushi (flocos de bonito)</li>
+                                        <li>1 cebola cortada ao meio</li>
+                                        <li>2 dentes de alho amassados</li>
+                                        <li>1 pedaço de gengibre</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <h3 class="font-semibold mb-2">Carne de Porco Chashu:</h3>
+                                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                        <li>500g de barriga de porco</li>
+                                        <li>1/2 xícara de molho shoyu</li>
+                                        <li>1/2 xícara de saquê mirin</li>
+                                        <li>2 colheres de sopa de açúcar mascavo</li>
+                                        <li>2 dentes de alho</li>
+                                        <li>1 pedaço de gengibre</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h3 class="font-semibold mb-2">Ovo Marinado (Ajitsuke Tamago):</h3>
+                                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                        <li>4 ovos</li>
+                                        <li>1/4 xícara de shoyu</li>
+                                        <li>1/4 xícara de mirin</li>
+                                        <li>1/4 xícara de água</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h3 class="font-semibold mb-2">Montagem:</h3>
+                                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                        <li>400g de macarrão para ramen</li>
+                                        <li>2 xícaras de broto de feijão</li>
+                                        <li>2 xícaras de espinafre branqueado</li>
+                                        <li>4 cebolinha verde picada</li>
+                                        <li>Nori (alga) cortada em tiras</li>
+                                        <li>Óleo de alho (la-yu)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 class="text-2xl font-bold mb-4 text-slate-700">Modo de Preparo</h2>
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="font-semibold mb-2">Caldo (Dashi):</h3>
+                                    <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                                        <li>Hidrate o kombu em água fria por 30 minutos</li>
+                                        <li>Aqueça até quase ferver e remova o kombu</li>
+                                        <li>Adicione o katsuobushi e desligue o fogo</li>
+                                        <li>Após 10 minutos, coe o caldo</li>
+                                        <li>Refogue alho, gengibre e cebola</li>
+                                        <li>Adicione ao caldo e cozinhe por 30 minutos</li>
+                                        <li>Coe novamente e tempere com shoyu e sal</li>
+                                    </ol>
+                                </div>
+                                
+                                <div>
+                                    <h3 class="font-semibold mb-2">Chashu:</h3>
+                                    <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                                        <li>Enrole a barriga de porco e amarre</li>
+                                        <li>Doure todos os lados em fogo alto</li>
+                                        <li>Misture shoyu, mirin, açúcar, alho e gengibre</li>
+                                        <li>Cozinhe em fogo baixo por 2 horas</li>
+                                        <li>Esfrie e fatie finamente</li>
+                                    </ol>
+                                </div>
+
+                                <div>
+                                    <h3 class="font-semibold mb-2">Ovo Marinado:</h3>
+                                    <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                                        <li>Cozinhe os ovos por 6 minutos e meio</li>
+                                        <li>Mergulhe em água com gelo</li>
+                                        <li>Descasque com cuidado</li>
+                                        <li>Misture shoyu, mirin e água</li>
+                                        <li>Marine os ovos por 4 horas</li>
+                                    </ol>
+                                </div>
+
+                                <div>
+                                    <h3 class="font-semibold mb-2">Montagem:</h3>
+                                    <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                                        <li>Cozinhe o macarrão conforme instruções</li>
+                                        <li>Aqueça o caldo</li>
+                                        <li>Em uma tigela, coloque o macarrão</li>
+                                        <li>Adicione o caldo quente</li>
+                                        <li>Disponha as fatias de chashu</li>
+                                        <li>Adicione meio ovo marinado</li>
+                                        <li>Decore com brotos, espinafre e cebolinha</li>
+                                        <li>Finalize com nori e óleo de alho</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div>
+                        <section class="bg-slate-50 p-6 rounded-lg">
+                            <h2 class="text-xl font-bold mb-4 text-slate-700">Dicas do Chef</h2>
+                            <ul class="space-y-4 text-gray-700">
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-slate-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    O caldo deve estar bem quente ao servir
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-slate-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    Prepare o chashu com antecedência
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-slate-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    Não deixe o macarrão passar do ponto
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section class="mt-8 bg-slate-50 p-6 rounded-lg">
+                            <h2 class="text-xl font-bold mb-4 text-slate-700">Informação Nutricional</h2>
+                            <div class="space-y-2 text-gray-700">
+                                <p>Porção: 1 tigela (500g)</p>
+                                <ul class="space-y-1">
+                                    <li>Calorias: 550 kcal</li>
+                                    <li>Proteínas: 32g</li>
+                                    <li>Carboidratos: 65g</li>
+                                    <li>Gorduras: 25g</li>
+                                    <li>Sódio: 1800mg</li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center text-gray-600">
+            <p> 2025 Sabores & Histórias. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
