@@ -1,6 +1,6 @@
 # 🍳 Sabores & Histórias - Blog de Receitas
 
-![Banner do Projeto](images/banner.png)
+![Banner do Projeto](images/screenshots/logo.png)
 
 ## 📝 Sobre o Projeto
 
