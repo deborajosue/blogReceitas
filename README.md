@@ -46,7 +46,7 @@ blogReceitas/
 *Header moderno com navegação intuitiva e seção de destaque*
 
 ### 👩‍🍳 Página de Receita
-![Página de Receita](images/screenshots/receita.png)
+![Página de Receita](images/screenshots/receita2.png)
 
 *Layout detalhado das receitas com imagens e instruções claras*
 
